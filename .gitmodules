@@ -1,0 +1,3 @@
+[submodule "swarm-rescue-code"]
+	path = swarm-rescue-code
+	url = https://github.com/emmanuel-battesti/swarm-rescue.git
