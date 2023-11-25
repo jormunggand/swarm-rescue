@@ -6,15 +6,16 @@ from spg_overlay.gui_map.gui_sr import GuiSR
 from solutions.my_drone_eval import MyDroneEval
 from solutions.my_drone_random import MyDroneRandom
 from solutions.my_drone_lidar_communication import MyDroneLidarCommunication
+from solutions.my_drone_mapping import MyDroneMapping
 from examples.example_semantic_sensor import MyDroneSemantic
 
 
 def main():
     #mymap = MyMapMedium02()
     mymap = MyMapIntermediate01()
-    pg = mymap.construct_playground(drone_type=MyDroneRandom)
+    pg = mymap.construct_playground(drone_type=MyDroneMapping)
 
-    gui = GuiSR(playground=pg, the_map=mymap)
+    gui = GuiSR(playground=pg, the_map=mymap, use_keyboard=True)
     gui.run()
 
 if __name__ == "__main__":
